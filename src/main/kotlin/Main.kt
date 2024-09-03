@@ -1,5 +1,9 @@
 package org.kotlin
 
+import org.kotlin.interfaces.CourseRepository
+import org.kotlin.interfaces.CourseRepositoryImpl
+
 fun main() {
-    println("Hello World!")
+    val courseRepository: CourseRepository = CourseRepositoryImpl()
+    courseRepository.printCourse(courseRepository.getCourseById(1))
 }
